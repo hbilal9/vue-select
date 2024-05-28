@@ -136,7 +136,7 @@ function getData(e){
 
  
  ## License
- [MIT License] (LICENSE)
+ [MIT License](LICENSE)
 
 ## Support Me
 support me to publish more packages like this for free.
