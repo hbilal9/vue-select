@@ -1,23 +1,19 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import typescript2 from "rollup-plugin-typescript2";
+import dts from "vite-plugin-dts";
 import { fileURLToPath, URL } from "url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		vue(),
-		typescript2({
-			check: false,
-			include: ["src/Select.vue"],
-			tsconfigOverride: {
-				compilerOptions: {
-					sourceMap: true,
-					declaration: true,
-					declarationMap: true,
-				},
-				exclude: ["vite.config.ts", "main.ts"],
-			},
+		dts({
+			// tsConfigFilePath: "./tsconfig.json",
+			include: ["src/**/*.vue", "src/**/*.ts"],
+			exclude: ["vite.config.ts", "main.ts"],
+			// outputDir: "dist/types",
+			insertTypesEntry: true,
+			rollupTypes: true,
 		}),
 	],
 	build: {

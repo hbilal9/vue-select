@@ -15,7 +15,7 @@ USAGE:
 const props = withDefaults(
 	defineProps<{
 		modelValue?: string | number | null | string[];
-		options: Array<any>;
+		options: Array<object | string>;
 		reduce: (item: any) => any;
 		label: (item: any) => any;
 		multiple?: boolean;

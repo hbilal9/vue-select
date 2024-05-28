@@ -1,7 +1,7 @@
 {
   "name": "@hbilal_9/vue-select",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "vue3",
     "select",
@@ -39,9 +39,12 @@
   "devDependencies": {
     "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^5.0.4",
-    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
     "vue-tsc": "^2.0.6"
+  },
+  "dependencies": {
+    "@hbilal_9/vue-select": "^0.0.2"
   }
 }
