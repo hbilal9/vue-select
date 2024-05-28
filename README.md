@@ -69,31 +69,31 @@ function getData(e){
   const data = ref("")
 
   const options = ref([
-	{
-		id: 1,
-		name: "Jone Shone",
-	},
-	{
-		id: 2,
-		name: "Snow White",
-	},
-	{
-		id: 3,
-		name: "kate Winslet",
-	},
-  ])
+  {
+	id: 1,
+	name: "Jone Shone",
+  },
+  {
+	id: 2,
+	name: "Snow White",
+  },
+  {
+	id: 3,
+	name: "kate Winslet",
+  },
+])
 
 </script>
 
 <template>
-    <v-select
-		v-model="data"
-		:options="options"
-		:reduce="(opt: any) => opt.id"
-		:label="(opt: any) => opt.name"
-		placeholder="choose user"
-		:multiple="true"
-	/>
+  <v-select
+	  v-model="data"
+	  :options="options"
+	  :reduce="(opt: any) => opt.id"
+	  :label="(opt: any) => opt.name"
+	  placeholder="choose user"
+	  :multiple="true"
+  />
 </template>
 
 ```
@@ -109,13 +109,13 @@ function getData(e){
 </script>
 
 <template>
-    <v-select
-		v-model="data"
-		:options="options"
-		:reduce="(name: any) => name"
-		:label="(name: any) => name"
-		placeholder="choose country"
-	/>
+  <v-select
+	v-model="data"
+	:options="options"
+	:reduce="(name: any) => name"
+	:label="(name: any) => name"
+    placeholder="choose country"
+  />
 </template>
 
 ```

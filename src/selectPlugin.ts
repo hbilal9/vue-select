@@ -1,5 +1,5 @@
 import { App } from "vue";
-import { Select } from "./lib";
+import Select from "./Select.vue";
 
 export default {
 	install(app: App) {
