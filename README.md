@@ -135,6 +135,8 @@ function getData(e){
 | reduce     |callback method that data you wanna receive in that v-model                                                  | method           | () => {} |
 
  
+ ## License
+ [MIT License] (LICENSE)
 
 ## Support Me
 support me to publish more packages like this for free.
