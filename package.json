@@ -1,14 +1,36 @@
 {
-  "name": "vue-select",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@hbilal_9/vue-select",
+  "private": false,
+  "version": "0.0.1",
+  "keywords": [
+    "vue3",
+    "select",
+    "dropdown",
+    "vue-select",
+    "vue3-select",
+    "vue3-dropdown",
+    "multiselect",
+    "multi-select"
+  ],
   "type": "module",
+  "unpkg": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/style.css": "./dist/style.css"
+  },
+  "broswer": {
+    "./dist/style.css": "./dist/style.css"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
