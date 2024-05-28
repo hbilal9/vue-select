@@ -1,7 +1,7 @@
 {
   "name": "@hbilal_9/vue-select",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "vue3",
     "select",
@@ -18,7 +18,9 @@
     ".": "./dist/index.js",
     "./dist/style.css": "./dist/style.css"
   },
-  "types": "./dist/lib/Select.vue.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/Select.vue.d.ts",
   "broswer": {
     "./dist/style.css": "./dist/style.css"
   },

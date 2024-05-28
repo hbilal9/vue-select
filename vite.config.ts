@@ -9,7 +9,7 @@ export default defineConfig({
 		vue(),
 		typescript2({
 			check: false,
-			include: ["src/lib/*.vue"],
+			include: ["src/Select.vue"],
 			tsconfigOverride: {
 				compilerOptions: {
 					sourceMap: true,
