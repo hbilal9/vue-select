@@ -38,27 +38,19 @@ Import vSelect in main.ts
   app.use(vSelect)
 ```
 
-Use as component
-
+## Nuxt Setup
+Create a plugin named vue-select.ts in plugins folder
 ```bash
-  import vSelect from '@hbilal_9/vue-select'
-  import '@hbilal_9/vue-select/dist/style.css'
+plugins/vue-select.ts
 ```
-In template
+Add the following code in vue-select.ts
+```bash
+  import vSelect from "@hbilal_9/vue-select";
+  import "@hbilal_9/vue-select/dist/style.css";
+  export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.use(vSelect);
+  });
 
-```
-  <v-select v-model="data"></v-select>
-```
-you can also pass change event
-```
-  <v-select @change="getData"></v-select>
-```
-in script
-
-```
-function getData(e){
-    console.log(e)
-}
 ```
 
 ##  Usage
@@ -118,6 +110,19 @@ function getData(e){
   />
 </template>
 
+```
+
+## Emits
+you can also pass change event
+```
+  <v-select @change="getData"></v-select>
+```
+in script
+
+```
+function getData(e){
+    console.log(e)
+}
 ```
 
 ## Props
