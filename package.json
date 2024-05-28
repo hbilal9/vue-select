@@ -1,7 +1,7 @@
 {
   "name": "@hbilal_9/vue-select",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "vue3",
     "select",
@@ -20,7 +20,7 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/Select.vue.d.ts",
+  "types": "./dist/types/index.d.ts",
   "broswer": {
     "./dist/style.css": "./dist/style.css"
   },
@@ -43,8 +43,5 @@
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1",
     "vue-tsc": "^2.0.6"
-  },
-  "dependencies": {
-    "@hbilal_9/vue-select": "^0.0.2"
   }
 }

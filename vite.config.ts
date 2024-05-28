@@ -8,12 +8,13 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		dts({
-			// tsConfigFilePath: "./tsconfig.json",
+			tsconfigPath: "./tsconfig.json",
 			include: ["src/**/*.vue", "src/**/*.ts"],
 			exclude: ["vite.config.ts", "main.ts"],
-			// outputDir: "dist/types",
+			outDir: "dist/types",
 			insertTypesEntry: true,
 			rollupTypes: true,
+			entryRoot: "src",
 		}),
 	],
 	build: {
