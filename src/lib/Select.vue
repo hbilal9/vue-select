@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 
 /*
 USAGE:
@@ -41,6 +41,18 @@ const selectedOption = ref<string | null>(null);
 const selectedItemNames = ref<any>([]);
 let uniqueSet = new Set();
 const selectedOptions = ref<any[]>([]);
+
+watch(
+	() => props.multiple,
+	() => {
+		filter.value = "";
+		selectedItemNames.value = [];
+		selectedOption.value = null;
+		selectedOptions.value = [];
+		uniqueSet = new Set();
+		emits("update:modelValue", null);
+	}
+);
 
 const handleClick = (item: any) => {
 	selectedOption.value = item;
