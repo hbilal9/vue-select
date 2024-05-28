@@ -18,6 +18,7 @@
     ".": "./dist/index.js",
     "./dist/style.css": "./dist/style.css"
   },
+  "types": "./dist/lib/Select.vue.d.ts",
   "broswer": {
     "./dist/style.css": "./dist/style.css"
   },
