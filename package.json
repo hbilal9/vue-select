@@ -18,6 +18,11 @@
     ".": "./dist/index.js",
     "./dist/style.css": "./dist/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hbilal9/vue-select.git"
+  },
+  "author": "HBilal Khan Yousafzai",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
