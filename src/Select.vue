@@ -24,6 +24,7 @@ const props = withDefaults(
 		label: (item: any) => any;
 		multiple?: boolean;
 		placeholder?: string;
+		filterClass?: string;
 	}>(),
 	{
 		multiple: false,
@@ -104,7 +105,7 @@ const isChecked = (item: any, event: Event) => {
 		</label>
 		<ul tabindex="0" class="relative dropdown-content select-dropdown">
 			<li class="sticky top-0 bg-white">
-				<input v-model="filter" class="filter-input" placeholder="Search" />
+				<input v-model="filter" :class="filterClass" class="filter-input" placeholder="Search" />
 			</li>
 			<li class="select-option" v-for="(op, idx) in filterOptions" :key="idx">
 				<div v-if="multiple" class="flex gap-2">

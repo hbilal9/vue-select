@@ -60,6 +60,7 @@ const options = [
 		placeholder="choose user"
 		:multiple="multiple"
 		class="test"
+		filterClass="filter"
 	/>
 	<label>
 		<input type="checkbox" v-model="multiple" />
@@ -74,5 +75,10 @@ const options = [
 	border-radius: 50px !important;
 	width: 30rem !important;
 	padding: 5rem !important;
+}
+
+.filter {
+	border: 2px solid red !important;
+	border-radius: 50px !important;
 }
 </style>
