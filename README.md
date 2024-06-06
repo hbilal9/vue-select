@@ -133,6 +133,8 @@ function getData(e){
 | options     | array of strings or objects                                                        | Array           | [] |
 | label     | callback method that return label                                                        | method           | () => {} |
 | reduce     |callback method that data you wanna receive in that v-model                                                  | method           | () => {} |
+| filter-class     |you can change filter input style, you can add any css property with !important                                                 | string           | default style |
+| class     |you can also modify default style  but make sure add !important with each property                                             | string           | default style |
 
  
  ## License
