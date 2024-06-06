@@ -23,11 +23,11 @@ const props = withDefaults(
 		reduce: (item: any) => any;
 		label: (item: any) => any;
 		multiple?: boolean;
-		plateholder?: string;
+		placeholder?: string;
 	}>(),
 	{
 		multiple: false,
-		plateholder: "Select an option",
+		placeholder: "Select an option",
 	}
 );
 const emits = defineEmits(["update:modelValue", "change"]);
@@ -90,7 +90,7 @@ const isChecked = (item: any, event: Event) => {
 <template>
 	<div class="dropdown dropdown-bottom z-20">
 		<label tabindex="0" :class="$attrs.class" class="label">
-			<span v-if="multiple && selectedItemNames.length == 0">{{ plateholder }}</span>
+			<span v-if="multiple && selectedItemNames.length == 0">{{ placeholder }}</span>
 			<div v-else-if="multiple" class="flex gap-1">
 				<span class="rounded-xl bg-gray-200 px-2 py-1">{{ selectedItemNames[0] }}</span>
 				<span class="rounded-xl bg-gray-200 px-2 py-1" v-if="selectedItemNames.length >= 2">
@@ -100,7 +100,7 @@ const isChecked = (item: any, event: Event) => {
 					{{ selectedItemNames.length - 2 }} more
 				</span>
 			</div>
-			<span v-else>{{ selectedItemNames[0] || plateholder }}</span>
+			<span v-else>{{ selectedItemNames[0] || placeholder }}</span>
 		</label>
 		<ul tabindex="0" class="relative dropdown-content select-dropdown">
 			<li class="sticky top-0 bg-white">
