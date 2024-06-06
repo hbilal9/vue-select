@@ -12,6 +12,10 @@ USAGE:
 />
 */
 
+defineOptions({
+	inheritAttrs: false,
+});
+
 const props = withDefaults(
 	defineProps<{
 		modelValue?: string | number | null | string[];
@@ -85,7 +89,7 @@ const isChecked = (item: any, event: Event) => {
 
 <template>
 	<div class="dropdown dropdown-bottom z-20">
-		<label tabindex="0" class="label">
+		<label tabindex="0" :class="$attrs.class" class="label">
 			<span v-if="multiple && selectedItemNames.length == 0">{{ plateholder }}</span>
 			<div v-else-if="multiple" class="flex gap-1">
 				<span class="rounded-xl bg-gray-200 px-2 py-1">{{ selectedItemNames[0] }}</span>
@@ -125,10 +129,10 @@ const isChecked = (item: any, event: Event) => {
 	position: relative;
 }
 
-.dropdown {
+/* .dropdown {
 	border: 1px solid #e5e7eb;
 	border-radius: 0.35rem;
-}
+} */
 
 .dropdown:focus-within .dropdown-content {
 	display: block;

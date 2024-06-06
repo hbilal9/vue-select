@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+// import VSelect from "./Select.vue";
 const multiple = ref(false);
 const data = ref("");
 const options = [
@@ -21,7 +22,7 @@ const options = [
 	},
 	{
 		id: 5,
-		name: "Leonardo DiCaprio",
+		name: "Leonardo DiCaprio what son",
 	},
 	{
 		id: 6,
@@ -56,8 +57,9 @@ const options = [
 		:options="options"
 		:reduce="(opt: any) => opt.id"
 		:label="(opt: any) => opt.name"
-		plateholder="choose user"
+		placeholder="choose user"
 		:multiple="multiple"
+		class="test"
 	/>
 	<label>
 		<input type="checkbox" v-model="multiple" />
@@ -66,18 +68,11 @@ const options = [
 	&nbsp; output: {{ data }}
 </template>
 
-<style scoped>
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-	filter: drop-shadow(0 0 2em #42b883aa);
+<style>
+.test {
+	border: 2px solid red !important;
+	border-radius: 50px !important;
+	width: 30rem !important;
+	padding: 5rem !important;
 }
 </style>
-./components/Select.vue
