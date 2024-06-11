@@ -21,7 +21,7 @@ export default defineConfig({
 		cssCodeSplit: false,
 		lib: {
 			entry: "./src/selectPlugin.ts",
-			formats: ["es", "cjs"],
+			formats: ["es"],
 			name: "vSelect",
 			fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
 		},
