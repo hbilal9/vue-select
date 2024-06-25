@@ -128,6 +128,7 @@ const isChecked = (item: any, event: Event) => {
 /* Dropdown container */
 .dropdown {
 	position: relative;
+	width: 100%;
 }
 
 /* .dropdown {
